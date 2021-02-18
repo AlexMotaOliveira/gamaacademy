@@ -1,0 +1,11 @@
+package com.gama.resttemplate.rest;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(url = "https://viacep.com.br/ws" , name = "viacep")
+public interface Feign {
+
+	@GetMapping("{cep}/json")
+	CEP buscaEnderecoPor(String cep);
+}

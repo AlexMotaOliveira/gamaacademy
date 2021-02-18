@@ -1,0 +1,16 @@
+public class Circulo{
+	 private double raio;
+}
+
+
+public class Teste{
+	public static void main (String args[]){
+		
+		Circulo circulo = new Circulo();
+		
+	
+	/* Coloque aqui o codigo para alterar o raio para 10 */
+	/* Coloque aqui o codigo para obter o valor do raio */
+	}
+}
+

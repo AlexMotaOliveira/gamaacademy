@@ -1,0 +1,40 @@
+package com.gama.security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+
+import com.gama.repository.CarroRepository;
+
+@EnableResourceServer
+@EnableAuthorizationServer
+@EnableWebSecurity
+public class SegurancaConfiguracao extends WebSecurityConfigurerAdapter{
+	
+	@Autowired
+	private CarroRepository carroRepository;
+
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		web.ignoring().antMatchers("/v2/api-docs",
+                "/configuration/ui",
+                "/swagger-resources/**",
+                "/configuration/security",
+                "/swagger-ui.html",
+                "/webjars/**",
+                "/h2-console/**");
+	}
+	
+	 @Override
+	    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+	        auth.userDetailsService(this.userService).passwordEncoder(passwordEncoder());
+	    }
+
+	    @Bean
+	    public PasswordEncoder passwordEncoder() {
+	        return NoOpPasswordEncoder.getInstance();
+	    }
+}

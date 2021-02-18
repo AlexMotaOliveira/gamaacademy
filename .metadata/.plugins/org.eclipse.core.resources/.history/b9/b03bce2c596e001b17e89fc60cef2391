@@ -1,0 +1,10 @@
+public class TesteBanco{
+	public static void main (String args[]){
+
+		AcessaBanco acessaBanco = new AcessaBanco();
+		
+		acessaBanco.setLogin("Alex");
+		acessaBanco.setConectado(true);
+
+	}
+}

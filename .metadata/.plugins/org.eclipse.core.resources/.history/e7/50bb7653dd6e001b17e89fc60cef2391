@@ -1,0 +1,26 @@
+package com.gama.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.gama.model.Carro;
+
+@Repository
+public interface CarroRepository extends JpaRepository<Carro, Long> {
+
+	
+	  Optional<Carro> findByModelo(String modelo);
+	  
+	  @Query("select c from Carro c where c.modelo = ?1")
+	  Optional<Carro> buscarModelo(String modelo);
+	  
+	  @Query("select c from Carro c where c.id = ?1")
+	  Optional<Carro> buscarId(Long id);
+
+
+	
+
+}

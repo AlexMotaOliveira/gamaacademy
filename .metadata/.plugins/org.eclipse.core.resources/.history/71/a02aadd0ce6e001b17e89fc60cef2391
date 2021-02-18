@@ -1,0 +1,27 @@
+package com.gama.resttemplate.rest;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.gama.resttemplate.feign.CEP;
+
+@Service
+public class UsaFeing {
+	
+	@Bean
+    public CommandLineRunner run(Feign client){
+        return args -> {
+            if (args.length > 0) {
+                String cep = args[0];
+ 
+                Endereco endereco = client
+                                     .buscaEnderecoPor(cep);
+ 
+                System.out.println(endereco);
+            }
+        };
+    }
+
+}

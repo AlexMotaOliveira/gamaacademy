@@ -1,0 +1,8 @@
+public class Teste {
+	public static void main(String args[]) {
+
+		Circulo circulo = new Circulo();
+		circulo.setRaio(10);
+		double raio = circulo.getRaio();
+	}
+}

@@ -1,0 +1,5 @@
+package com.gama.dto.autenticacao;
+
+public class UsuarioCustomDTO {
+
+}

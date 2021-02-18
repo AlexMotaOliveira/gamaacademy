@@ -1,0 +1,5 @@
+package com.gama.config;
+
+public class AppConfig {
+
+}

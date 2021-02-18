@@ -1,0 +1,26 @@
+package com.gama;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.repository.core.support.RepositoryMethodInvocationListener.RepositoryMethodInvocationResult;
+import org.springframework.validation.Validator;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+
+import com.sun.org.apache.bcel.internal.util.Repository;
+
+@SpringBootApplication
+public class GamaSpringDataJpaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GamaSpringDataJpaApplication.class, args);
+	}
+	
+	@Bean
+	public Validator validator() {
+		return new LocalValidatorFactoryBean();
+	}
+	
+	
+
+}

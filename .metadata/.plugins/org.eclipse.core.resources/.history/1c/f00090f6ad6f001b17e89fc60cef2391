@@ -1,0 +1,5 @@
+package com.gama.autenticacao.config;
+
+public class ResourceServerConfig {
+
+}
