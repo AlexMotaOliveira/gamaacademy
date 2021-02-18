@@ -8936,3 +8936,75 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2021-02-18 18:01:22.226
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:56.326
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:56.332
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2a3de2b[org.springframework.tooling.boot.ls:1.22.0.202009151440(id=673)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:56.339
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:56.361
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.877
+!MESSAGE Boot LS startup time from start to initialized: 1529ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.910
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.kAJGzvVcisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.916
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.922
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.929
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.936
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.941
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.946
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.952
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.kAJGzvVc => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.959
+!MESSAGE classpath=101 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.969
+!MESSAGE buffering callback sts4.classpath.kAJGzvVc gama-resttemplate false 101
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.975
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.985
+!MESSAGE classpath=126 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:57.998
+!MESSAGE buffering callback sts4.classpath.kAJGzvVc gama-spring-data-jpa false 126
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:58.015
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:58.025
+!MESSAGE classpath=13 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:58.040
+!MESSAGE buffering callback sts4.classpath.kAJGzvVc spring-xml-anotacao false 13
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:58.046
+!MESSAGE executing callback sts4.classpath.kAJGzvVc 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 18:01:58.086
+!MESSAGE executing callback sts4.classpath.kAJGzvVc SUCCESS [done]
