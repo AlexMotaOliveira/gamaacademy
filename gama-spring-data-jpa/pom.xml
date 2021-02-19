@@ -14,7 +14,8 @@
 	<version>0.1</version>
 	<name>gama-spring-data-jpa</name>
 	<description>Exemplo de projeto com Spring Data JPA</description>
-	<properties>		<java.version>14</java.version>
+	<properties>
+		<java.version>14</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -53,7 +54,7 @@
 			<artifactId>spring-security-oauth2</artifactId>
 			<version>2.3.4.RELEASE</version>
 		</dependency>
-			<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
