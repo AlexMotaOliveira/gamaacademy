@@ -37,20 +37,20 @@ public class CarroController {
 
 	@PutMapping("/{id}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	public ResponseEntity<Carro> alterar(@PathVariable("id") Long id,@Valid @RequestBody Carro carro) {
-		if (!repository.existsById(id)) 
+	public ResponseEntity<Carro> alterar(@PathVariable("id") Long id, @Valid @RequestBody Carro carro) {
+		if (!repository.existsById(id))
 			return ResponseEntity.notFound().build();
-		
+
 		carro.setId(id);
-		return  ResponseEntity.ok(repository.save(carro));
+		return ResponseEntity.ok(repository.save(carro));
 	}
-	
+
 	@DeleteMapping("/{id}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	public ResponseEntity<Void> excluir(@PathVariable("id") Long id) {
-		if (!repository.existsById(id)) 
+		if (!repository.existsById(id))
 			return ResponseEntity.notFound().build();
-		
+
 		repository.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
@@ -59,9 +59,9 @@ public class CarroController {
 	public ResponseEntity<Carro> buscar(@PathVariable("id") Long id) {
 		Optional<Carro> carroDB = repository.findById(id);
 
-		if (carroDB.isPresent()) 
+		if (carroDB.isPresent())
 			return ResponseEntity.ok(carroDB.get());
-		
+
 		return ResponseEntity.notFound().build();
 	}
 
@@ -69,9 +69,9 @@ public class CarroController {
 	public ResponseEntity<Carro> buscarPorModelo(@RequestParam("modelo") String modelo) {
 		Optional<Carro> carroDB = repository.findByModelo(modelo);
 
-		if (carroDB.isPresent()) 
+		if (carroDB.isPresent())
 			return ResponseEntity.ok(carroDB.get());
-		
+
 		return ResponseEntity.notFound().build();
 	}
 
@@ -79,4 +79,5 @@ public class CarroController {
 	public List<Carro> listarTodos() {
 		return repository.findAll();
 	}
+
 }

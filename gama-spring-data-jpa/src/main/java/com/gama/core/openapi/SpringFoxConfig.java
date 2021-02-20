@@ -21,11 +21,8 @@ public class SpringFoxConfig {
 		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.gama"))
 				.paths(PathSelectors.any()).build().apiInfo(apiInfo()).useDefaultResponseMessages(false);
 	}
-
 	private ApiInfo apiInfo() {
 		return new ApiInfo("Documentação Cadastro de carros", "Descrição", "Versão", "Termos de serviço", null,
 				"Licença", "URL da licença", new ArrayList<>());
-
 	}
-
 }

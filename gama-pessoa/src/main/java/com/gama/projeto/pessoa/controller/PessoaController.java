@@ -34,38 +34,44 @@ public class PessoaController {
 		return ResponseEntity.ok(pessoaRepository.save(pessoa));
 	}
 
-	@PutMapping("/{id}")
-	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	public ResponseEntity<Pessoa> alterar(@PathVariable("id") Long id, @Valid @RequestBody Pessoa pessoa) {
-		if (!pessoaRepository.existsById(id))
-			return ResponseEntity.notFound().build();
+	/*
+	 * @PutMapping("/{id}")
+	 * 
+	 * @ResponseStatus(value = HttpStatus.NO_CONTENT) public ResponseEntity<Pessoa>
+	 * alterar(@PathVariable("id") Long id, @Valid @RequestBody Pessoa pessoa) { if
+	 * (!pessoaRepository.existsById(id)) return ResponseEntity.notFound().build();
+	 * 
+	 * pessoa.setId(id); return ResponseEntity.ok(pessoaRepository.save(pessoa)); }
+	 * 
+	 * @DeleteMapping("/{id}")
+	 * 
+	 * @ResponseStatus(value = HttpStatus.NO_CONTENT) public ResponseEntity<Void>
+	 * excluir(@PathVariable("id") Long id) { if (!pessoaRepository.existsById(id))
+	 * return ResponseEntity.notFound().build();
+	 * 
+	 * pessoaRepository.deleteById(id); return ResponseEntity.noContent().build(); }
+	 * 
+	 * @GetMapping("/{id}") public ResponseEntity<Pessoa> buscar(@PathVariable("id")
+	 * Long id) { Optional<Pessoa> pessoaDB = pessoaRepository.findById(id);
+	 * 
+	 * if (pessoaDB.isPresent()) return ResponseEntity.ok(pessoaDB.get());
+	 * 
+	 * return ResponseEntity.notFound().build(); }
+	 * 
+	 * @GetMapping public List<Pessoa> listarTodos() { return
+	 * pessoaRepository.findAll(); }
+	 */
 
-		pessoa.setId(id);
-		return ResponseEntity.ok(pessoaRepository.save(pessoa));
-	}
+	@GetMapping("/email/{email}")
+	public Pessoa buscarId(@PathVariable("email") String email) {
+	return pessoaRepository.findByEmail(email);}
 
-	@DeleteMapping("/{id}")
-	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	public ResponseEntity<Void> excluir(@PathVariable("id") Long id) {
-		if (!pessoaRepository.existsById(id))
-			return ResponseEntity.notFound().build();
+	@GetMapping("/cpf/{cpf}")
+	public Pessoa buscarcpf(@PathVariable("cpf") String cpf) {
+	return pessoaRepository.findByCpf(cpf);}
+	
+	@GetMapping("/nome/{nome}")
+	public Pessoa buscarnome(@PathVariable("nome") String nome) {
+	return pessoaRepository.findByNome(nome);}
 
-		pessoaRepository.deleteById(id);
-		return ResponseEntity.noContent().build();
-	}
-
-	@GetMapping("/{id}")
-	public ResponseEntity<Pessoa> buscar(@PathVariable("id") Long id) {
-		Optional<Pessoa> pessoaDB = pessoaRepository.findById(id);
-
-		if (pessoaDB.isPresent())
-			return ResponseEntity.ok(pessoaDB.get());
-
-		return ResponseEntity.notFound().build();
-	}
-
-	@GetMapping
-	public List<Pessoa> listarTodos() {
-		return pessoaRepository.findAll();
-	}
 }

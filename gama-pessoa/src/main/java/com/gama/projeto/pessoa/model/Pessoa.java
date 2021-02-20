@@ -1,5 +1,9 @@
 package com.gama.projeto.pessoa.model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,8 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.br.CPF;
 
 @Entity
 public class Pessoa {
@@ -27,7 +29,7 @@ public class Pessoa {
 	@Column(nullable = false, length = 60)
 	private String email;
 
-	@CPF
+	
 	@Column(nullable = false, length = 50)
 	private String cpf;
 
@@ -75,4 +77,8 @@ public class Pessoa {
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+	
+	
+	
+	 
 }

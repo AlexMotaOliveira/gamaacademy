@@ -3,8 +3,11 @@ package com.gama;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
+
 import com.gama.config.AppConfig;
 import com.gama.model.Carro;
+
 
 public class PasseioApp {
 	public static void main(String[] args) {

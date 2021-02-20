@@ -1,11 +1,11 @@
 package com.gama.dto.autenticacao;
 
+import java.util.Collection;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.gama.model.Usuario;
-
-import java.util.Collection;
 
 public class UsuarioCustomDTO implements UserDetails {
 

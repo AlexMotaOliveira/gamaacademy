@@ -13,7 +13,7 @@ public class UsaFeing {
     public CommandLineRunner run(Feign client){
         return args -> {
             if (args.length > 0) {
-                String cep = "03590170";
+                String cep = "03044-000";
  
                 CEP endereco = client
                                      .buscaEnderecoPor(cep);
